@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@drawable/registro"
+    android:orientation="vertical">
+    <!-- Nombre  -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/intermedium"
+        android:text="Nombre completo:"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:background="@drawable/edittext"
+        android:ems="10"
+        android:hint="Ingresa tu nombre completo"
+        android:inputType="text"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:text="" />
+    <!-- Nacimiento  -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/intermedium"
+        android:text="Fecha de nacimiento:"
+        android:textColor="#000000" />
+
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:background="@drawable/edittext"
+        android:hint="dd/mm/aaaa"
+        android:padding="10dp"
+        android:paddingStart="20dp"/>
+    <!-- Usuario  -->
+    <TextView
+        android:layout_marginTop="40dp"
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:fontFamily="@font/intermedium"
+        android:text="Usuario:"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:background="@drawable/edittext"
+        android:ems="10"
+        android:hint="Ingresa un nombre de usuario"
+        android:inputType="text"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:text="" />
+    <!-- Email  -->
+    <TextView
+        android:layout_marginTop="40dp"
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:fontFamily="@font/intermedium"
+        android:text="Email:"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:background="@drawable/edittext"
+        android:ems="10"
+        android:hint="Ingresa un email"
+        android:inputType="text"
+        android:padding="10dp"
+        android:paddingStart="20dp"
+        android:text="" />
+    <!-- Contraseña  -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:layout_weight="0"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/intermedium"
+        android:text="Contraseña:"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/editTextText5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:background="@drawable/edittext"
+        android:ems="10"
+        android:hint="Ingresa una contraseña"
+        android:drawableRight="@drawable/hide_password"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:padding="10dp"
+        android:text="" />
+    <!-- Verficia contraseña  -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:layout_weight="0"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/intermedium"
+        android:text="Confirma la contraseña:"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/editTextText6"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:background="@drawable/edittext"
+        android:drawableRight="@drawable/hide_password"
+        android:ems="10"
+        android:hint="Confirma tu contraseña"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:padding="10dp"
+        android:text="" />
+    <!-- Boton  -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="153dp"
+        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#5568CE"
+        android:text="REGISTRARME"
+        android:textStyle="bold" />
+
+</LinearLayout>
