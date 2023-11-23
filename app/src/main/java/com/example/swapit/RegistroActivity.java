@@ -2,15 +2,19 @@ package com.example.swapit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class RegistroActivity extends AppCompatActivity {
     private EditText editTextPassword;
     private EditText editTextPassword2;
+    private Button botonRegistrar;
     private boolean isPasswordVisible = false;
 
     @Override
@@ -20,6 +24,15 @@ public class RegistroActivity extends AppCompatActivity {
 
         editTextPassword = findViewById(R.id.editTextText5);
         editTextPassword2 = findViewById(R.id.editTextText6);
+        botonRegistrar = findViewById(R.id.button);
+
+        botonRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         setupPasswordVisibilityToggle(editTextPassword);
         setupPasswordVisibilityToggle(editTextPassword2);
@@ -39,6 +52,7 @@ public class RegistroActivity extends AppCompatActivity {
     }
 
     private void togglePasswordVisibility(EditText editText) {
+        Typeface typeface = getResources().getFont(R.font.intermedium);
         // Cambiar la visibilidad de la contraseña
         isPasswordVisible = !isPasswordVisible;
 
@@ -51,5 +65,7 @@ public class RegistroActivity extends AppCompatActivity {
         // Cambiar el ícono
         int iconId = isPasswordVisible ? R.drawable.show_password : R.drawable.hide_password;
         editText.setCompoundDrawablesWithIntrinsicBounds(0, 0, iconId, 0);
+        editTextPassword.setTypeface(typeface);
+        editTextPassword2.setTypeface(typeface);
     }
 }

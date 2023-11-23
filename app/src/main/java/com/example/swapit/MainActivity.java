@@ -3,6 +3,7 @@ package com.example.swapit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.MotionEvent;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private EditText editTextPassword;
+    private EditText editTextUsername;
     private boolean isPasswordVisible = false;
     private TextView textViewRegister;
 
@@ -21,8 +23,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Inicializar las variables
+
         editTextPassword = findViewById(R.id.editTextText2);
+        Typeface typeface = getResources().getFont(R.font.intermedium);
+        editTextUsername = findViewById(R.id.editTextText);
+        editTextUsername.setTypeface(typeface);
+
+
+
 
         // Establecer el listener de pulsación en el ícono de la contraseña
         editTextPassword.setOnTouchListener(new View.OnTouchListener() {
@@ -50,18 +58,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void togglePasswordVisibility() {
+        Typeface typeface = getResources().getFont(R.font.intermedium);
         // Cambiar la visibilidad de la contraseña
         isPasswordVisible = !isPasswordVisible;
 
         int inputType = isPasswordVisible ? InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
                 : InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD;
-
         editTextPassword.setInputType(inputType);
         editTextPassword.setSelection(editTextPassword.getText().length());  // Mover el cursor al final del texto
 
         // Cambiar el ícono
         int iconId = isPasswordVisible ? R.drawable.show_password : R.drawable.hide_password;
         editTextPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, iconId, 0);
+        editTextPassword.setTypeface(typeface);
 
     }
 
